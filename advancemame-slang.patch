@@ -1,0 +1,11 @@
+--- advancemame-3.10/configure.ac.orig	2024-02-11 08:48:09.000000000 +0100
++++ advancemame-3.10/configure.ac	2024-04-22 19:32:30.019533760 +0200
+@@ -721,7 +721,7 @@ if test $ac_lib_slang = auto; then
+ 	if test $ac_lib_slang = yes; then
+ 		ac_save_CFLAGS="$CFLAGS"
+ 		ac_save_LIBS="$LIBS"
+-		CFLAGS="SLANG_CFLAGS $CFLAGS"
++		CFLAGS="$SLANG_CFLAGS $CFLAGS"
+ 		LIBS="$SLANG_LIBS $LIBS"
+                 AC_MSG_CHECKING([for linking slang])
+                 AC_TRY_LINK([
