@@ -69,7 +69,8 @@ wideo, monitorów PC oraz ekranów LCD.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+# racy mkdir vs copy
+%{__make} -j1 install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	docdir=%{_docdir} \
 	mandir=%{_mandir}
